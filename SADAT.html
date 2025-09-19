@@ -1,0 +1,2738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoodChoice College Smart Minister 2025</title>
+    <style>
+        :root {
+            --cream: #FFF5E1;
+            --peach: #FFDAB9;
+            --coffee-brown: #A17C5E;
+            --dark-brown: #5C4033;
+            --white: #FFFFFF;
+            --light-brown: #D7CCC8;
+            --dark-peach: #FFAB91;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--cream);
+            color: var(--dark-brown);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(to right, var(--coffee-brown), var(--dark-brown));
+            color: var(--white);
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 3px solid var(--dark-brown);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .app-name {
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .subtitle {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        
+        .page {
+            display: none;
+            padding: 20px;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            min-height: 70vh;
+        }
+        
+        .active {
+            display: block;
+        }
+        
+        .role-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .role-btn {
+            padding: 15px 30px;
+            background: linear-gradient(to bottom, var(--peach), var(--dark-peach));
+            color: var(--dark-brown);
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 200px;
+        }
+        
+        .role-btn:hover {
+            background: linear-gradient(to bottom, var(--dark-peach), var(--coffee-brown));
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+        
+        .pin-container {
+            text-align: center;
+            margin-top: 50px;
+            background-color: var(--light-brown);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .pin-input {
+            padding: 12px;
+            font-size: 18px;
+            border: 2px solid var(--coffee-brown);
+            border-radius: 5px;
+            margin-bottom: 20px;
+            width: 200px;
+            text-align: center;
+        }
+        
+        .submit-btn {
+            padding: 12px 25px;
+            background: linear-gradient(to bottom, var(--coffee-brown), var(--dark-brown));
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: linear-gradient(to bottom, var(--dark-brown), var(--coffee-brown));
+            transform: scale(1.05);
+        }
+        
+        .dashboard-header {
+            background: linear-gradient(to right, var(--peach), var(--dark-peach));
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .welcome-message {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--dark-brown);
+        }
+        
+        .logout-btn {
+            padding: 8px 15px;
+            background-color: var(--dark-brown);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .logout-btn:hover {
+            background-color: var(--coffee-brown);
+        }
+        
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        
+        .menu-btn {
+            padding: 12px 18px;
+            background: linear-gradient(to bottom, var(--coffee-brown), var(--dark-brown));
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            min-width: 150px;
+        }
+        
+        .menu-btn:hover {
+            background: linear-gradient(to bottom, var(--dark-brown), var(--coffee-brown));
+            transform: translateY(-2px);
+        }
+        
+        .content-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: var(--cream);
+            border-radius: 8px;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--peach);
+            color: var(--dark-brown);
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--dark-brown);
+        }
+        
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--coffee-brown);
+            border-radius: 5px;
+            background-color: var(--white);
+        }
+        
+        .form-textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .form-select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--coffee-brown);
+            border-radius: 5px;
+            background-color: var(--white);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        table, th, td {
+            border: 1px solid var(--coffee-brown);
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: var(--peach);
+            color: var(--dark-brown);
+        }
+        
+        tr:nth-child(even) {
+            background-color: var(--cream);
+        }
+        
+        .news-feed {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .news-card {
+            background: linear-gradient(to bottom, var(--white), var(--cream));
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid var(--light-brown);
+        }
+        
+        .news-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--dark-brown);
+            border-bottom: 1px solid var(--peach);
+            padding-bottom: 5px;
+        }
+        
+        .news-content {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .news-meta {
+            font-size: 12px;
+            color: var(--coffee-brown);
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        .alert {
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-left: 4px solid;
+        }
+        
+        .alert-warning {
+            background-color: #ffecb3;
+            border-left-color: #ffc107;
+            color: #7d6608;
+        }
+        
+        .alert-info {
+            background-color: #bbdefb;
+            border-left-color: #2196f3;
+            color: #0d47a1;
+        }
+        
+        .alert-success {
+            background-color: #c8e6c9;
+            border-left-color: #4caf50;
+            color: #2e7d32;
+        }
+        
+        .graph-container {
+            height: 300px;
+            background-color: var(--white);
+            border: 1px solid var(--coffee-brown);
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+        }
+        
+        .bar {
+            width: 40px;
+            background: linear-gradient(to top, var(--coffee-brown), var(--dark-brown));
+            margin: 0 5px;
+            position: relative;
+            text-align: center;
+            color: var(--white);
+            font-weight: bold;
+        }
+        
+        .bar-label {
+            position: absolute;
+            bottom: -25px;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            color: var(--dark-brown);
+        }
+        
+        .poll-container {
+            background-color: var(--cream);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid var(--light-brown);
+        }
+        
+        .poll-option {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: var(--white);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .poll-option:hover {
+            background-color: var(--peach);
+        }
+        
+        .attendance-graph {
+            display: flex;
+            height: 200px;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+            border: 1px solid var(--coffee-brown);
+            border-radius: 8px;
+            background-color: var(--white);
+        }
+        
+        .attendance-bar {
+            width: 40px;
+            background: linear-gradient(to top, var(--coffee-brown), var(--dark-brown));
+            position: relative;
+            text-align: center;
+            color: var(--white);
+            font-weight: bold;
+        }
+        
+        .attendance-label {
+            position: absolute;
+            bottom: -25px;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            color: var(--dark-brown);
+        }
+        
+        footer {
+            background: linear-gradient(to right, var(--coffee-brown), var(--dark-brown));
+            color: var(--white);
+            text-align: center;
+            padding: 15px 0;
+            margin-top: auto;
+        }
+        
+        .action-btn {
+            padding: 8px 12px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .edit-btn {
+            background-color: #ff9800;
+            color: white;
+        }
+        
+        .delete-btn {
+            background-color: #f44336;
+            color: white;
+        }
+        
+        .view-btn {
+            background-color: #2196f3;
+            color: white;
+        }
+        
+        .print-btn {
+            background-color: #4caf50;
+            color: white;
+        }
+        
+        .pay-btn {
+            background-color: #4caf50;
+            color: white;
+        }
+        
+        .approve-btn {
+            background-color: #2196f3;
+            color: white;
+        }
+        
+        .reject-btn {
+            background-color: #f44336;
+            color: white;
+        }
+        
+        .tab-container {
+            display: flex;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--coffee-brown);
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: var(--light-brown);
+            border: 1px solid var(--coffee-brown);
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+            margin-right: 5px;
+        }
+        
+        .tab.active {
+            background-color: var(--peach);
+            font-weight: bold;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 15px;
+            background-color: var(--white);
+            border: 1px solid var(--coffee-brown);
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .minister-card {
+            background: linear-gradient(to bottom, var(--white), var(--cream));
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid var(--light-brown);
+        }
+        
+        .minister-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--dark-brown);
+            margin-bottom: 5px;
+        }
+        
+        .minister-details {
+            font-size: 14px;
+            color: var(--coffee-brown);
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        .status-present {
+            background-color: #4caf50;
+            color: white;
+        }
+        
+        .status-late {
+            background-color: #ff9800;
+            color: white;
+        }
+        
+        .status-absent {
+            background-color: #f44336;
+            color: white;
+        }
+        
+        .joke-card {
+            background: linear-gradient(to bottom, var(--white), var(--cream));
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid var(--light-brown);
+        }
+        
+        .joke-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--dark-brown);
+            margin-bottom: 10px;
+        }
+        
+        .joke-content {
+            font-size: 14px;
+            color: var(--coffee-brown);
+            font-style: italic;
+        }
+        
+        .budget-card {
+            background: linear-gradient(to bottom, var(--white), var(--cream));
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid var(--light-brown);
+        }
+        
+        .budget-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--dark-brown);
+            margin-bottom: 10px;
+        }
+        
+        .budget-details {
+            font-size: 14px;
+            color: var(--coffee-brown);
+        }
+        
+        .budget-amount {
+            font-weight: bold;
+            color: var(--dark-brown);
+        }
+        
+        @media (max-width: 768px) {
+            .role-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .menu {
+                flex-direction: column;
+            }
+            
+            .news-feed {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="app-name">GoodChoice College Smart Minister 2025</div>
+            <div class="subtitle">Minister Management System</div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Login Page -->
+        <div id="loginPage" class="page active">
+            <h2 style="text-align: center; margin-bottom: 30px; color: var(--dark-brown);">Welcome to GoodChoice College Minister System</h2>
+            <div class="role-buttons">
+                <button class="role-btn" onclick="selectRole('primeMinister')">Prime Minister</button>
+                <button class="role-btn" onclick="selectRole('patron')">Patron</button>
+                <button class="role-btn" onclick="selectRole('minister')">Minister</button>
+            </div>
+            
+            <div id="pinSection" class="pin-container" style="display: none;">
+                <h3 id="roleTitle" style="margin-bottom: 15px; color: var(--dark-brown);">Enter PIN</h3>
+                <input type="password" id="pinInput" class="pin-input" placeholder="Enter PIN">
+                <br>
+                <button class="submit-btn" onclick="verifyPin()">Submit</button>
+            </div>
+        </div>
+        
+        <!-- Prime Minister Dashboard -->
+        <div id="pmDashboard" class="page">
+            <div class="dashboard-header">
+                <div class="welcome-message">Welcome, Matovu Ashraf (Prime Minister) - Good Choice College</div>
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+            
+            <div class="menu">
+                <button class="menu-btn" onclick="showSection('registerMinister')">Register Ministers</button>
+                <button class="menu-btn" onclick="showSection('postImportantDays')">Important Days</button>
+                <button class="menu-btn" onclick="showSection('ministersOnDuty')">Ministers on Duty</button>
+                <button class="menu-btn" onclick="showSection('setAttendance')">Set Attendance</button>
+                <button class="menu-btn" onclick="showSection('viewReports')">View Reports</button>
+                <button class="menu-btn" onclick="showSection('issueFines')">Issue Fines</button>
+                <button class="menu-btn" onclick="showSection('budgetApproval')">Budget Approval</button>
+                <button class="menu-btn" onclick="showSection('createPoll')">Create Poll</button>
+                <button class="menu-btn" onclick="showSection('postNews')">Post News</button>
+                <button class="menu-btn" onclick="showSection('themeJokes')">Theme & Jokes</button>
+                <button class="menu-btn" onclick="showSection('bestMinister')">Best Minister</button>
+                <button class="menu-btn" onclick="showSection('dataManagement')">Data Management</button>
+                <button class="menu-btn" onclick="showSection('changePin')">Change PIN</button>
+                <button class="menu-btn" onclick="showSection('viewFines')">View Fines</button>
+            </div>
+            
+            <!-- Register Minister Section -->
+            <div id="registerMinister" class="content-section">
+                <h3 class="section-title">Register New Minister</h3>
+                <div class="form-group">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" id="ministerName" class="form-input" placeholder="Enter minister's name">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Class</label>
+                    <input type="text" id="ministerClass" class="form-input" placeholder="Enter class">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">House</label>
+                    <select id="ministerHouse" class="form-select">
+                        <option value="">Select House</option>
+                        <option value="Onyx">Onyx</option>
+                        <option value="Anonymous">Anonymous</option>
+                        <option value="Chrystolite">Chrystolite</option>
+                        <option value="Phoenix">Phoenix</option>
+                    </select>
+                </div>
+                <button class="submit-btn" onclick="registerMinister()">Register Minister</button>
+                
+                <h3 class="section-title" style="margin-top: 30px;">Registered Ministers</h3>
+                <table id="ministersTable">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>House</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ministersList">
+                        <!-- Ministers will be listed here -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Post Important Days Section -->
+            <div id="postImportantDays" class="content-section" style="display: none;">
+                <h3 class="section-title">Post Important Days</h3>
+                <div class="form-group">
+                    <label class="form-label">Day Title</label>
+                    <input type="text" id="importantDayTitle" class="form-input" placeholder="Enter day title">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Date</label>
+                    <input type="date" id="importantDayDate" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Description</label>
+                    <textarea id="importantDayDescription" class="form-textarea" placeholder="Enter description"></textarea>
+                </div>
+                <button class="submit-btn" onclick="postImportantDay()">Post Important Day</button>
+                
+                <h3 class="section-title" style="margin-top: 30px;">Important Days</h3>
+                <div id="importantDaysList">
+                    <!-- Important days will be listed here -->
+                </div>
+            </div>
+            
+            <!-- Ministers on Duty Section -->
+            <div id="ministersOnDuty" class="content-section" style="display: none;">
+                <h3 class="section-title">Assign Ministers on Duty</h3>
+                <div class="form-group">
+                    <label class="form-label">Select Minister</label>
+                    <select id="dutyMinister" class="form-select">
+                        <option value="">Select Minister</option>
+                        <!-- Ministers will be populated here -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Duty Date</label>
+                    <input type="date" id="dutyDate" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Assignment</label>
+                    <textarea id="dutyAssignment" class="form-textarea" placeholder="Enter assignment details"></textarea>
+                </div>
+                <button class="submit-btn" onclick="assignDuty()">Assign Duty</button>
+                
+                <h3 class="section-title" style="margin-top: 30px;">Ministers on Duty</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Minister</th>
+                            <th>Date</th>
+                            <th>Assignment</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dutyList">
+                        <!-- Duty assignments will be listed here -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Set Attendance Section -->
+            <div id="setAttendance" class="content-section" style="display: none;">
+                <h3 class="section-title">Set Attendance Parameters</h3>
+                <div class="form-group">
+                    <label class="form-label">Meeting Time</label>
+                    <input type="time" id="meetingTime" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Time Allowance (minutes)</label>
+                    <input type="number" id="timeAllowance" class="form-input" value="5" min="0">
+                </div>
+                <button class="submit-btn" onclick="setAttendanceParams()">Set Parameters</button>
+                
+                <h3 class="section-title" style="margin-top: 30px;">Today's Attendance</h3>
+                <div class="attendance-graph" id="attendanceGraph">
+                    <!-- Attendance graph will be displayed here -->
+                </div>
+                
+                <h3 class="section-title">Mark Attendance</h3>
+                <div id="attendanceList">
+                    <!-- Attendance list will be displayed here -->
+                </div>
+            </div>
+            
+            <!-- View Reports Section -->
+            <div id="viewReports" class="content-section" style="display: none;">
+                <h3 class="section-title">Minister Reports</h3>
+                <div id="reportsList">
+                    <!-- Reports will be listed here -->
+                </div>
+            </div>
+            
+            <!-- Issue Fines Section -->
+            <div id="issueFines" class="content-section" style="display: none;">
+                <h3 class="section-title">Issue Fine to Minister</h3>
+                <div class="form-group">
+                    <label class="form-label">Select Minister</label>
+                    <select id="fineMinister" class="form-select">
+                        <option value="">Select Minister</option>
+                        <!-- Ministers will be populated here -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Fine Amount</label>
+                    <input type="number" id="fineAmount" class="form-input" placeholder="Enter amount">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Reason</label>
+                    <textarea id="fineReason" class="form-textarea" placeholder="Enter reason for fine"></textarea>
+                </div>
+                <button class="submit-btn" onclick="issueFine()">Issue Fine</button>
+                
+                <h3 class="section-title" style="margin-top: 30px;">Fines History</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Minister</th>
+                            <th>Amount</th>
+                            <th>Reason</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="finesList">
+                        <!-- Fines will be listed here -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Budget Approval Section -->
+            <div id="budgetApproval" class="content-section" style="display: none;">
+                <h3 class="section-title">Budget Approval</h3>
+                <div id="budgetsList">
+                    <!-- Budgets will be listed here -->
+                </div>
+            </div>
+            
+            <!-- Create Poll Section -->
+            <div id="createPoll" class="content-section" style="display: none;">
+                <h3 class="section-title">Create Poll</h3>
+                <div class="form-group">
+                    <label class="form-label">Poll Question</label>
+                    <input type="text" id="pollQuestion" class="form-input" placeholder="Enter poll question">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Option 1</label>
+                    <input type="text" id="pollOption1" class="form-input" placeholder="Enter option 1">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Option 2</label>
+                    <input type="text" id="pollOption2" class="form-input" placeholder="Enter option 2">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Option 3</label>
+                    <input type="text" id="pollOption3" class="form-input" placeholder="Enter option 3 (optional)">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Option 4</label>
+                    <input type="text" id="pollOption4" class="form-input" placeholder="Enter option 4 (optional)">
+                </div>
+                <button class="submit-btn" onclick="createPoll()">Create Poll</button>
+                
+                <h3 class="section-title" style="margin-top: 30px;">Active Polls</h3>
+                <div id="pollsList">
+                    <!-- Polls will be listed here -->
+                </div>
+            </div>
+            
+            <!-- Post News Section -->
+            <div id="postNews" class="content-section" style="display: none;">
+                <h3 class="section-title">Post News</h3>
+                <div class="form-group">
+                    <label class="form-label">News Category</label>
+                    <select id="newsCategory" class="form-select">
+                        <option value="school">School</option>
+                        <option value="community">Community</option>
+                        <option value="national">National</option>
+                        <option value="international">International</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="innovation">Innovation</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">News Title</label>
+                    <input type="text" id="newsTitle" class="form-input" placeholder="Enter news title">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">News Content</label>
+                    <textarea id="newsContent" class="form-textarea" placeholder="Enter news content"></textarea>
+                </div>
+                <button class="submit-btn" onclick="postNews()">Post News</button>
+                
+                <h3 class="section-title" style="margin-top: 30px;">News Feed</h3>
+                <div id="newsList">
+                    <!-- News will be listed here -->
+                </div>
+            </div>
+            
+            <!-- Theme & Jokes Section -->
+            <div id="themeJokes" class="content-section" style="display: none;">
+                <h3 class="section-title">Theme of the Week</h3>
+                <div class="form-group">
+                    <label class="form-label">Theme Title</label>
+                    <input type="text" id="themeTitle" class="form-input" placeholder="Enter theme title">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Theme Description</label>
+                    <textarea id="themeDescription" class="form-textarea" placeholder="Enter theme description"></textarea>
+                </div>
+                <button class="submit-btn" onclick="setTheme()">Set Theme</button>
+                
+                <h3 class="section-title" style="margin-top: 30px;">Post Joke</h3>
+                <div class="form-group">
+                    <label class="form-label">Joke Title</label>
+                    <input type="text" id="jokeTitle" class="form-input" placeholder="Enter joke title">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Joke Content</label>
+                    <textarea id="jokeContent" class="form-textarea" placeholder="Enter joke content"></textarea>
+                </div>
+                <button class="submit-btn" onclick="postJoke()">Post Joke</button>
+                
+                <h3 class="section-title" style="margin-top: 30px;">Current Theme</h3>
+                <div id="currentTheme">
+                    <!-- Current theme will be displayed here -->
+                </div>
+                
+                <h3 class="section-title">Jokes</h3>
+                <div id="jokesList">
+                    <!-- Jokes will be listed here -->
+                </div>
+            </div>
+            
+            <!-- Best Minister Section -->
+            <div id="bestMinister" class="content-section" style="display: none;">
+                <h3 class="section-title">Select Best Minister of the Week</h3>
+                <div class="form-group">
+                    <label class="form-label">Select Minister</label>
+                    <select id="bestMinisterSelect" class="form-select">
+                        <option value="">Select Minister</option>
+                        <!-- Ministers will be populated here -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Achievements</label>
+                    <textarea id="bestMinisterAchievements" class="form-textarea" placeholder="Enter achievements"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Facts</label>
+                    <textarea id="bestMinisterFacts" class="form-textarea" placeholder="Enter interesting facts"></textarea>
+                </div>
+                <button class="submit-btn" onclick="setBestMinister()">Set as Best Minister</button>
+                
+                <h3 class="section-title" style="margin-top: 30px;">Best Minister of the Week</h3>
+                <div id="bestMinisterDisplay">
+                    <!-- Best minister will be displayed here -->
+                </div>
+            </div>
+            
+            <!-- Data Management Section -->
+            <div id="dataManagement" class="content-section" style="display: none;">
+                <h3 class="section-title">Data Management</h3>
+                <div class="form-group">
+                    <button class="submit-btn" onclick="exportData()">Export Data</button>
+                    <button class="submit-btn" onclick="importData()">Import Data</button>
+                    <button class="submit-btn" style="background-color: #f44336;" onclick="clearData()">Clear All Data</button>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Import Data (JSON format)</label>
+                    <textarea id="importDataText" class="form-textarea" placeholder="Paste JSON data here"></textarea>
+                </div>
+                <div id="exportDataDisplay" style="display: none;">
+                    <h3 class="section-title">Exported Data</h3>
+                    <pre id="exportDataText"></pre>
+                </div>
+            </div>
+            
+            <!-- Change PIN Section -->
+            <div id="changePin" class="content-section" style="display: none;">
+                <h3 class="section-title">Change PIN</h3>
+                <div class="form-group">
+                    <label class="form-label">Current PIN</label>
+                    <input type="password" id="currentPin" class="form-input" placeholder="Enter current PIN">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">New PIN</label>
+                    <input type="password" id="newPin" class="form-input" placeholder="Enter new PIN">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Confirm New PIN</label>
+                    <input type="password" id="confirmPin" class="form-input" placeholder="Confirm new PIN">
+                </div>
+                <button class="submit-btn" onclick="changePin()">Change PIN</button>
+            </div>
+            
+            <!-- View Fines Section -->
+            <div id="viewFines" class="content-section" style="display: none;">
+                <h3 class="section-title">Fines Payment</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Minister</th>
+                            <th>Amount</th>
+                            <th>Reason</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="finesPaymentList">
+                        <!-- Fines for payment will be listed here -->
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        
+        <!-- Minister Dashboard -->
+        <div id="ministerDashboard" class="page">
+            <div class="dashboard-header">
+                <div class="welcome-message">Welcome, <span id="ministerUserName">Minister Name</span></div>
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+            
+            <div class="menu">
+                <button class="menu-btn" onclick="showMinisterSection('viewPosts')">View Posts</button>
+                <button class="menu-btn" onclick="showMinisterSection('viewAlerts')">View Alerts</button>
+                <button class="menu-btn" onclick="showMinisterSection('submitReport')">Submit Report</button>
+                <button class="menu-btn" onclick="showMinisterSection('submitBudget')">Submit Budget</button>
+                <button class="menu-btn" onclick="showMinisterSection('markAttendance')">Mark Attendance</button>
+                <button class="menu-btn" onclick="showMinisterSection('viewNews')">News Feed</button>
+                <button class="menu-btn" onclick="showMinisterSection('votePoll')">Vote in Poll</button>
+                <button class="menu-btn" onclick="showMinisterSection('viewFines')">My Fines</button>
+                <button class="menu-btn" onclick="showMinisterSection('viewJokes')">Jokes & Facts</button>
+            </div>
+            
+            <div id="viewPosts" class="content-section">
+                <h3 class="section-title">Posts and Announcements</h3>
+                <div id="postsContainer">
+                    <!-- Posts will be displayed here -->
+                </div>
+            </div>
+            
+            <div id="viewAlerts" class="content-section" style="display: none;">
+                <h3 class="section-title">Alerts and Warnings</h3>
+                <div id="alertsContainer">
+                    <!-- Alerts will be displayed here -->
+                </div>
+            </div>
+            
+            <div id="submitReport" class="content-section" style="display: none;">
+                <h3 class="section-title">Submit Report</h3>
+                <div class="form-group">
+                    <label class="form-label">Report Title</label>
+                    <input type="text" id="reportTitle" class="form-input" placeholder="Enter report title">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Report Content</label>
+                    <textarea id="reportContent" class="form-textarea" placeholder="Enter report content"></textarea>
+                </div>
+                <button class="submit-btn" onclick="submitReport()">Submit Report</button>
+                
+                <h3 class="section-title" style="margin-top: 30px;">My Reports</h3>
+                <div id="myReportsList">
+                    <!-- Minister's reports will be listed here -->
+                </div>
+            </div>
+            
+            <div id="submitBudget" class="content-section" style="display: none;">
+                <h3 class="section-title">Submit Budget Proposal</h3>
+                <div class="form-group">
+                    <label class="form-label">Budget Title</label>
+                    <input type="text" id="budgetTitle" class="form-input" placeholder="Enter budget title">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Budget Amount</label>
+                    <input type="number" id="budgetAmount" class="form-input" placeholder="Enter amount">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Budget Description</label>
+                    <textarea id="budgetDescription" class="form-textarea" placeholder="Enter budget description"></textarea>
+                </div>
+                <button class="submit-btn" onclick="submitBudget()">Submit Budget</button>
+                
+                <h3 class="section-title" style="margin-top: 30px;">My Budget Proposals</h3>
+                <div id="myBudgetsList">
+                    <!-- Minister's budgets will be listed here -->
+                </div>
+            </div>
+            
+            <div id="markAttendance" class="content-section" style="display: none;">
+                <h3 class="section-title">Mark Attendance</h3>
+                <div id="attendanceStatus">
+                    <!-- Attendance status will be displayed here -->
+                </div>
+                <button class="submit-btn" onclick="markAttendance()">Mark My Attendance</button>
+            </div>
+            
+            <div id="viewNews" class="content-section" style="display: none;">
+                <h3 class="section-title">News Feed</h3>
+                <div id="ministerNewsContainer">
+                    <!-- News will be displayed here -->
+                </div>
+            </div>
+            
+            <div id="votePoll" class="content-section" style="display: none;">
+                <h3 class="section-title">Current Polls</h3>
+                <div id="pollsContainer">
+                    <!-- Polls will be displayed here -->
+                </div>
+            </div>
+            
+            <div id="viewFines" class="content-section" style="display: none;">
+                <h3 class="section-title">My Fines</h3>
+                <div id="myFinesList">
+                    <!-- Minister's fines will be listed here -->
+                </div>
+            </div>
+            
+            <div id="viewJokes" class="content-section" style="display: none;">
+                <h3 class="section-title">Jokes of the Week</h3>
+                <div id="jokesContainer">
+                    <!-- Jokes will be displayed here -->
+                </div>
+                
+                <h3 class="section-title">Facts of the Week</h3>
+                <div id="factsContainer">
+                    <!-- Facts will be displayed here -->
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Patron Dashboard -->
+        <div id="patronDashboard" class="page">
+            <div class="dashboard-header">
+                <div class="welcome-message">Welcome, Patron</div>
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+            
+            <div class="menu">
+                <button class="menu-btn" onclick="showPatronSection('viewMinisters')">View Ministers</button>
+                <button class="menu-btn" onclick="showPatronSection('viewReports')">View Reports</button>
+                <button class="menu-btn" onclick="showPatronSection('postInfo')">Post Information</button>
+                <button class="menu-btn" onclick="showPatronSection('viewAttendance')">View Attendance</button>
+                <button class="menu-btn" onclick="showPatronSection('viewBudgets')">View Budgets</button>
+            </div>
+            
+            <div id="viewMinisters" class="content-section">
+                <h3 class="section-title">All Ministers</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>House</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="patronMinistersList">
+                        <!-- Ministers list for patron -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="viewReports" class="content-section" style="display: none;">
+                <h3 class="section-title">Minister Reports</h3>
+                <div id="patronReportsList">
+                    <!-- Reports for patron -->
+                </div>
+            </div>
+            
+            <div id="postInfo" class="content-section" style="display: none;">
+                <h3 class="section-title">Post Information for Ministers</h3>
+                <div class="form-group">
+                    <label class="form-label">Information Title</label>
+                    <input type="text" id="infoTitle" class="form-input" placeholder="Enter title">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Information Content</label>
+                    <textarea id="infoContent" class="form-textarea" placeholder="Enter content"></textarea>
+                </div>
+                <button class="submit-btn" onclick="postInfo()">Post Information</button>
+            </div>
+            
+            <div id="viewAttendance" class="content-section" style="display: none;">
+                <h3 class="section-title">Attendance Records</h3>
+                <div class="attendance-graph" id="patronAttendanceGraph">
+                    <!-- Attendance graph will be displayed here -->
+                </div>
+                
+                <h3 class="section-title">Attendance Details</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Minister</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="patronAttendanceList">
+                        <!-- Attendance details for patron -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="viewBudgets" class="content-section" style="display: none;">
+                <h3 class="section-title">Budget Proposals</h3>
+                <div id="patronBudgetsList">
+                    <!-- Budgets for patron -->
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>GoodChoice College Smart Minister 2025 © 2023 | Minister Management System</p>
+        </div>
+    </footer>
+
+    <script>
+        // Global variables
+        let currentRole = '';
+        let currentUser = null;
+        let ministers = JSON.parse(localStorage.getItem('ministers')) || [];
+        let posts = JSON.parse(localStorage.getItem('posts')) || [];
+        let importantDays = JSON.parse(localStorage.getItem('importantDays')) || [];
+        let duties = JSON.parse(localStorage.getItem('duties')) || [];
+        let attendance = JSON.parse(localStorage.getItem('attendance')) || { meetingTime: "09:00", allowance: 5, records: [] };
+        let reports = JSON.parse(localStorage.getItem('reports')) || [];
+        let fines = JSON.parse(localStorage.getItem('fines')) || [];
+        let budgets = JSON.parse(localStorage.getItem('budgets')) || [];
+        let polls = JSON.parse(localStorage.getItem('polls')) || [];
+        let news = JSON.parse(localStorage.getItem('news')) || [];
+        let alerts = JSON.parse(localStorage.getItem('alerts')) || [];
+        let jokes = JSON.parse(localStorage.getItem('jokes')) || [];
+        let themes = JSON.parse(localStorage.getItem('themes')) || [];
+        let bestMinisters = JSON.parse(localStorage.getItem('bestMinisters')) || [];
+        let facts = JSON.parse(localStorage.getItem('facts')) || [];
+        
+        // Initialize the application
+        function initApp() {
+            // Check if we have any stored data, if not initialize
+            if (!localStorage.getItem('ministers')) {
+                localStorage.setItem('ministers', JSON.stringify([]));
+            }
+            if (!localStorage.getItem('posts')) {
+                localStorage.setItem('posts', JSON.stringify([]));
+            }
+            if (!localStorage.getItem('importantDays')) {
+                localStorage.setItem('importantDays', JSON.stringify([]));
+            }
+            if (!localStorage.getItem('duties')) {
+                localStorage.setItem('duties', JSON.stringify([]));
+            }
+            if (!localStorage.getItem('attendance')) {
+                localStorage.setItem('attendance', JSON.stringify({ meetingTime: "09:00", allowance: 5, records: [] }));
+            }
+            if (!localStorage.getItem('reports')) {
+                localStorage.setItem('reports', JSON.stringify([]));
+            }
+            if (!localStorage.getItem('fines')) {
+                localStorage.setItem('fines', JSON.stringify([]));
+            }
+            if (!localStorage.getItem('budgets')) {
+                localStorage.setItem('budgets', JSON.stringify([]));
+            }
+            if (!localStorage.getItem('polls')) {
+                localStorage.setItem('polls', JSON.stringify([]));
+            }
+            if (!localStorage.getItem('news')) {
+                localStorage.setItem('news', JSON.stringify([]));
+            }
+            if (!localStorage.getItem('alerts')) {
+                localStorage.setItem('alerts', JSON.stringify([]));
+            }
+            if (!localStorage.getItem('jokes')) {
+                localStorage.setItem('jokes', JSON.stringify([]));
+            }
+            if (!localStorage.getItem('themes')) {
+                localStorage.setItem('themes', JSON.stringify([]));
+            }
+            if (!localStorage.getItem('bestMinisters')) {
+                localStorage.setItem('bestMinisters', JSON.stringify([]));
+            }
+            if (!localStorage.getItem('facts')) {
+                localStorage.setItem('facts', JSON.stringify([]));
+            }
+            
+            // Load initial data
+            loadMinistersList();
+        }
+        
+        // Role selection
+        function selectRole(role) {
+            currentRole = role;
+            document.getElementById('pinSection').style.display = 'block';
+            
+            let roleTitle = '';
+            switch(role) {
+                case 'primeMinister':
+                    roleTitle = 'Prime Minister Login';
+                    break;
+                case 'patron':
+                    roleTitle = 'Patron Login';
+                    break;
+                case 'minister':
+                    roleTitle = 'Minister Login';
+                    break;
+            }
+            
+            document.getElementById('roleTitle').textContent = roleTitle;
+        }
+        
+        // PIN verification
+        function verifyPin() {
+            const pin = document.getElementById('pinInput').value;
+            let isValid = false;
+            
+            switch(currentRole) {
+                case 'primeMinister':
+                    isValid = pin === '1111';
+                    if (isValid) {
+                        currentUser = { name: 'Matovu Ashraf', role: 'primeMinister' };
+                        showDashboard('pmDashboard');
+                        loadPmData();
+                    }
+                    break;
+                case 'patron':
+                    isValid = pin === '2222';
+                    if (isValid) {
+                        currentUser = { name: 'Patron', role: 'patron' };
+                        showDashboard('patronDashboard');
+                        loadPatronMinisters();
+                    }
+                    break;
+                case 'minister':
+                    // For ministers, we need to check if the PIN matches any minister's code
+                    const minister = ministers.find(m => m.code === pin);
+                    if (minister) {
+                        currentUser = minister;
+                        document.getElementById('ministerUserName').textContent = minister.name;
+                        showDashboard('ministerDashboard');
+                        loadMinisterPosts();
+                    } else {
+                        alert('Invalid minister code!');
+                    }
+                    return;
+            }
+            
+            if (isValid) {
+                document.getElementById('pinInput').value = '';
+            } else {
+                alert('Invalid PIN!');
+            }
+        }
+        
+        // Show appropriate dashboard
+        function showDashboard(dashboardId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(dashboardId).classList.add('active');
+        }
+        
+        // Logout function
+        function logout() {
+            currentRole = '';
+            currentUser = null;
+            document.getElementById('pinSection').style.display = 'none';
+            showDashboard('loginPage');
+        }
+        
+        // Register a new minister
+        function registerMinister() {
+            const name = document.getElementById('ministerName').value;
+            const ministerClass = document.getElementById('ministerClass').value;
+            const house = document.getElementById('ministerHouse').value;
+            
+            if (!name || !ministerClass || !house) {
+                alert('Please fill all fields!');
+                return;
+            }
+            
+            // Generate a code (simple implementation)
+            const code = generateMinisterCode();
+            
+            const newMinister = {
+                id: Date.now(),
+                name,
+                class: ministerClass,
+                house,
+                code,
+                attendance: [],
+                fines: 0,
+                reports: [],
+                budgets: []
+            };
+            
+            ministers.push(newMinister);
+            localStorage.setItem('ministers', JSON.stringify(ministers));
+            
+            // Clear form
+            document.getElementById('ministerName').value = '';
+            document.getElementById('ministerClass').value = '';
+            document.getElementById('ministerHouse').value = '';
+            
+            // Update ministers list
+            loadMinistersList();
+            
+            alert(`Minister registered successfully! Code: ${code}`);
+        }
+        
+        // Generate a minister code
+        function generateMinisterCode() {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let code = '';
+            for (let i = 0; i < 6; i++) {
+                code += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return code;
+        }
+        
+        // Load ministers list
+        function loadMinistersList() {
+            const ministersList = document.getElementById('ministersList');
+            ministersList.innerHTML = '';
+            
+            ministers.forEach(minister => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${minister.code}</td>
+                    <td>${minister.name}</td>
+                    <td>${minister.class}</td>
+                    <td>${minister.house}</td>
+                    <td>
+                        <button class="action-btn edit-btn" onclick="editMinister(${minister.id})">Edit</button>
+                        <button class="action-btn delete-btn" onclick="deleteMinister(${minister.id})">Delete</button>
+                    </td>
+                `;
+                ministersList.appendChild(row);
+            });
+        }
+        
+        // Load ministers for patron view
+        function loadPatronMinisters() {
+            const patronMinistersList = document.getElementById('patronMinistersList');
+            patronMinistersList.innerHTML = '';
+            
+            ministers.forEach(minister => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${minister.code}</td>
+                    <td>${minister.name}</td>
+                    <td>${minister.class}</td>
+                    <td>${minister.house}</td>
+                    <td>Active</td>
+                `;
+                patronMinistersList.appendChild(row);
+            });
+        }
+        
+        // Show section in PM dashboard
+        function showSection(sectionId) {
+            document.querySelectorAll('#pmDashboard > .content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+            
+            // Load specific data for the section
+            if (sectionId === 'postImportantDays') {
+                loadImportantDays();
+            } else if (sectionId === 'ministersOnDuty') {
+                loadDutyMinisters();
+            } else if (sectionId === 'setAttendance') {
+                loadAttendanceData();
+            } else if (sectionId === 'viewReports') {
+                loadReports();
+            } else if (sectionId === 'issueFines') {
+                loadFines();
+            } else if (sectionId === 'budgetApproval') {
+                loadBudgets();
+            } else if (sectionId === 'createPoll') {
+                loadPolls();
+            } else if (sectionId === 'postNews') {
+                loadNews();
+            } else if (sectionId === 'themeJokes') {
+                loadThemesAndJokes();
+            } else if (sectionId === 'bestMinister') {
+                loadBestMinister();
+            } else if (sectionId === 'viewFines') {
+                loadFinesPayment();
+            }
+        }
+        
+        // Show section in Minister dashboard
+        function showMinisterSection(sectionId) {
+            document.querySelectorAll('#ministerDashboard > .content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+            
+            // Load specific data for the section
+            if (sectionId === 'viewAlerts') {
+                loadMinisterAlerts();
+            } else if (sectionId === 'submitReport') {
+                loadMinisterReports();
+            } else if (sectionId === 'submitBudget') {
+                loadMinisterBudgets();
+            } else if (sectionId === 'viewNews') {
+                loadMinisterNews();
+            } else if (sectionId === 'votePoll') {
+                loadMinisterPolls();
+            } else if (sectionId === 'viewFines') {
+                loadMinisterFines();
+            } else if (sectionId === 'viewJokes') {
+                loadMinisterJokesAndFacts();
+            }
+        }
+        
+        // Show section in Patron dashboard
+        function showPatronSection(sectionId) {
+            document.querySelectorAll('#patronDashboard > .content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+            
+            // Load specific data for the section
+            if (sectionId === 'viewReports') {
+                loadPatronReports();
+            } else if (sectionId === 'viewAttendance') {
+                loadPatronAttendance();
+            } else if (sectionId === 'viewBudgets') {
+                loadPatronBudgets();
+            }
+        }
+        
+        // Load posts for minister
+        function loadMinisterPosts() {
+            const postsContainer = document.getElementById('postsContainer');
+            postsContainer.innerHTML = '';
+            
+            if (posts.length === 0) {
+                postsContainer.innerHTML = '<div class="alert alert-info">No posts available.</div>';
+                return;
+            }
+            
+            posts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.className = 'news-card';
+                postElement.innerHTML = `
+                    <div class="news-title">${post.title}</div>
+                    <div class="news-content">${post.content}</div>
+                    <div class="news-meta">
+                        Posted on: ${new Date(post.date).toLocaleDateString()} by ${post.author}
+                    </div>
+                `;
+                postsContainer.appendChild(postElement);
+            });
+        }
+        
+        // Load important days
+        function loadImportantDays() {
+            const importantDaysList = document.getElementById('importantDaysList');
+            importantDaysList.innerHTML = '';
+            
+            if (importantDays.length === 0) {
+                importantDaysList.innerHTML = '<div class="alert alert-info">No important days posted yet.</div>';
+                return;
+            }
+            
+            importantDays.forEach(day => {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'news-card';
+                dayElement.innerHTML = `
+                    <div class="news-title">${day.title}</div>
+                    <div class="news-meta">Date: ${new Date(day.date).toLocaleDateString()}</div>
+                    <div class="news-content">${day.description}</div>
+                `;
+                importantDaysList.appendChild(dayElement);
+            });
+        }
+        
+        // Post important day
+        function postImportantDay() {
+            const title = document.getElementById('importantDayTitle').value;
+            const date = document.getElementById('importantDayDate').value;
+            const description = document.getElementById('importantDayDescription').value;
+            
+            if (!title || !date || !description) {
+                alert('Please fill all fields!');
+                return;
+            }
+            
+            const newImportantDay = {
+                id: Date.now(),
+                title,
+                date,
+                description,
+                author: 'Prime Minister'
+            };
+            
+            importantDays.push(newImportantDay);
+            localStorage.setItem('importantDays', JSON.stringify(importantDays));
+            
+            // Clear form
+            document.getElementById('importantDayTitle').value = '';
+            document.getElementById('importantDayDate').value = '';
+            document.getElementById('importantDayDescription').value = '';
+            
+            // Update list
+            loadImportantDays();
+            
+            alert('Important day posted successfully!');
+        }
+        
+        // Load duty ministers dropdown
+        function loadDutyMinisters() {
+            const dutyMinisterSelect = document.getElementById('dutyMinister');
+            dutyMinisterSelect.innerHTML = '<option value="">Select Minister</option>';
+            
+            ministers.forEach(minister => {
+                const option = document.createElement('option');
+                option.value = minister.id;
+                option.textContent = minister.name;
+                dutyMinisterSelect.appendChild(option);
+            });
+            
+            loadDutyList();
+        }
+        
+        // Assign duty to minister
+        function assignDuty() {
+            const ministerId = document.getElementById('dutyMinister').value;
+            const date = document.getElementById('dutyDate').value;
+            const assignment = document.getElementById('dutyAssignment').value;
+            
+            if (!ministerId || !date || !assignment) {
+                alert('Please fill all fields!');
+                return;
+            }
+            
+            const minister = ministers.find(m => m.id == ministerId);
+            
+            const newDuty = {
+                id: Date.now(),
+                ministerId,
+                ministerName: minister.name,
+                date,
+                assignment
+            };
+            
+            duties.push(newDuty);
+            localStorage.setItem('duties', JSON.stringify(duties));
+            
+            // Clear form
+            document.getElementById('dutyMinister').value = '';
+            document.getElementById('dutyDate').value = '';
+            document.getElementById('dutyAssignment').value = '';
+            
+            // Update list
+            loadDutyList();
+            
+            alert('Duty assigned successfully!');
+        }
+        
+        // Load duty list
+        function loadDutyList() {
+            const dutyList = document.getElementById('dutyList');
+            dutyList.innerHTML = '';
+            
+            if (duties.length === 0) {
+                dutyList.innerHTML = '<tr><td colspan="4" style="text-align: center;">No duties assigned yet.</td></tr>';
+                return;
+            }
+            
+            duties.forEach(duty => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${duty.ministerName}</td>
+                    <td>${new Date(duty.date).toLocaleDateString()}</td>
+                    <td>${duty.assignment}</td>
+                    <td>
+                        <button class="action-btn edit-btn">Edit</button>
+                        <button class="action-btn delete-btn">Delete</button>
+                    </td>
+                `;
+                dutyList.appendChild(row);
+            });
+        }
+        
+        // Load attendance data
+        function loadAttendanceData() {
+            // Set current values
+            document.getElementById('meetingTime').value = attendance.meetingTime || '09:00';
+            document.getElementById('timeAllowance').value = attendance.allowance || 5;
+            
+            // Load attendance graph
+            loadAttendanceGraph();
+            
+            // Load attendance list
+            loadAttendanceList();
+        }
+        
+        // Set attendance parameters
+        function setAttendanceParams() {
+            const meetingTime = document.getElementById('meetingTime').value;
+            const allowance = document.getElementById('timeAllowance').value;
+            
+            attendance.meetingTime = meetingTime;
+            attendance.allowance = parseInt(allowance);
+            
+            localStorage.setItem('attendance', JSON.stringify(attendance));
+            
+            alert('Attendance parameters updated successfully!');
+        }
+        
+        // Load attendance graph
+        function loadAttendanceGraph() {
+            const attendanceGraph = document.getElementById('attendanceGraph');
+            attendanceGraph.innerHTML = '';
+            
+            // Sample data for demonstration
+            const data = [
+                { label: 'Present', value: 15 },
+                { label: 'Late', value: 5 },
+                { label: 'Absent', value: 3 }
+            ];
+            
+            const maxValue = Math.max(...data.map(item => item.value));
+            
+            data.forEach(item => {
+                const height = (item.value / maxValue) * 180;
+                const bar = document.createElement('div');
+                bar.className = 'attendance-bar';
+                bar.style.height = `${height}px`;
+                bar.innerHTML = `${item.value}`;
+                
+                const label = document.createElement('div');
+                label.className = 'attendance-label';
+                label.textContent = item.label;
+                
+                bar.appendChild(label);
+                attendanceGraph.appendChild(bar);
+            });
+        }
+        
+        // Load attendance list
+        function loadAttendanceList() {
+            const attendanceList = document.getElementById('attendanceList');
+            attendanceList.innerHTML = '';
+            
+            if (ministers.length === 0) {
+                attendanceList.innerHTML = '<div class="alert alert-info">No ministers registered yet.</div>';
+                return;
+            }
+            
+            ministers.forEach(minister => {
+                const card = document.createElement('div');
+                card.className = 'minister-card';
+                
+                const status = Math.random() > 0.3 ? (Math.random() > 0.5 ? 'present' : 'late') : 'absent';
+                const statusClass = status === 'present' ? 'status-present' : (status === 'late' ? 'status-late' : 'status-absent');
+                
+                card.innerHTML = `
+                    <div class="minister-name">${minister.name} <span class="status-badge ${statusClass}">${status}</span></div>
+                    <div class="minister-details">Class: ${minister.class} | House: ${minister.house} | Code: ${minister.code}</div>
+                `;
+                
+                attendanceList.appendChild(card);
+            });
+        }
+        
+        // Load minister alerts
+        function loadMinisterAlerts() {
+            const alertsContainer = document.getElementById('alertsContainer');
+            alertsContainer.innerHTML = '';
+            
+            if (alerts.length === 0) {
+                alertsContainer.innerHTML = '<div class="alert alert-info">No alerts at this time.</div>';
+                return;
+            }
+            
+            alerts.forEach(alert => {
+                const alertElement = document.createElement('div');
+                alertElement.className = `alert alert-${alert.type}`;
+                alertElement.innerHTML = `
+                    <strong>${alert.title}</strong><br>
+                    ${alert.message}<br>
+                    <small>${new Date(alert.date).toLocaleDateString()}</small>
+                `;
+                alertsContainer.appendChild(alertElement);
+            });
+        }
+        
+        // Submit report
+        function submitReport() {
+            const title = document.getElementById('reportTitle').value;
+            const content = document.getElementById('reportContent').value;
+            
+            if (!title || !content) {
+                alert('Please fill all fields!');
+                return;
+            }
+            
+            const newReport = {
+                id: Date.now(),
+                ministerId: currentUser.id,
+                ministerName: currentUser.name,
+                title,
+                content,
+                date: new Date().toISOString(),
+                status: 'Pending'
+            };
+            
+            reports.push(newReport);
+            localStorage.setItem('reports', JSON.stringify(reports));
+            
+            // Clear form
+            document.getElementById('reportTitle').value = '';
+            document.getElementById('reportContent').value = '';
+            
+            alert('Report submitted successfully!');
+        }
+        
+        // Load reports
+        function loadReports() {
+            const reportsList = document.getElementById('reportsList');
+            reportsList.innerHTML = '';
+            
+            if (reports.length === 0) {
+                reportsList.innerHTML = '<div class="alert alert-info">No reports submitted yet.</div>';
+                return;
+            }
+            
+            reports.forEach(report => {
+                const reportElement = document.createElement('div');
+                reportElement.className = 'news-card';
+                reportElement.innerHTML = `
+                    <div class="news-title">${report.title} <span class="status-badge">${report.status}</span></div>
+                    <div class="news-content">${report.content}</div>
+                    <div class="news-meta">
+                        Submitted by: ${report.ministerName} on ${new Date(report.date).toLocaleDateString()}
+                    </div>
+                    <div>
+                        <button class="action-btn view-btn">View</button>
+                        <button class="action-btn approve-btn">Approve</button>
+                        <button class="action-btn reject-btn">Reject</button>
+                    </div>
+                `;
+                reportsList.appendChild(reportElement);
+            });
+        }
+        
+        // Load fines
+        function loadFines() {
+            const finesList = document.getElementById('finesList');
+            finesList.innerHTML = '';
+            
+            // Populate minister dropdown
+            const fineMinisterSelect = document.getElementById('fineMinister');
+            fineMinisterSelect.innerHTML = '<option value="">Select Minister</option>';
+            ministers.forEach(minister => {
+                const option = document.createElement('option');
+                option.value = minister.id;
+                option.textContent = minister.name;
+                fineMinisterSelect.appendChild(option);
+            });
+            
+            if (fines.length === 0) {
+                finesList.innerHTML = '<tr><td colspan="6" style="text-align: center;">No fines issued yet.</td></tr>';
+                return;
+            }
+            
+            fines.forEach(fine => {
+                const minister = ministers.find(m => m.id === fine.ministerId);
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${minister ? minister.name : 'Unknown'}</td>
+                    <td>${fine.amount}</td>
+                    <td>${fine.reason}</td>
+                    <td>${new Date(fine.date).toLocaleDateString()}</td>
+                    <td>${fine.paid ? 'Paid' : 'Unpaid'}</td>
+                    <td>
+                        <button class="action-btn view-btn">View</button>
+                        <button class="action-btn delete-btn">Delete</button>
+                    </td>
+                `;
+                finesList.appendChild(row);
+            });
+        }
+        
+        // Issue fine
+        function issueFine() {
+            const ministerId = document.getElementById('fineMinister').value;
+            const amount = document.getElementById('fineAmount').value;
+            const reason = document.getElementById('fineReason').value;
+            
+            if (!ministerId || !amount || !reason) {
+                alert('Please fill all fields!');
+                return;
+            }
+            
+            const minister = ministers.find(m => m.id == ministerId);
+            
+            const newFine = {
+                id: Date.now(),
+                ministerId,
+                ministerName: minister.name,
+                amount: parseFloat(amount),
+                reason,
+                date: new Date().toISOString(),
+                paid: false
+            };
+            
+            fines.push(newFine);
+            localStorage.setItem('fines', JSON.stringify(fines));
+            
+            // Clear form
+            document.getElementById('fineMinister').value = '';
+            document.getElementById('fineAmount').value = '';
+            document.getElementById('fineReason').value = '';
+            
+            // Update list
+            loadFines();
+            
+            alert('Fine issued successfully!');
+        }
+        
+        // Load budgets
+        function loadBudgets() {
+            const budgetsList = document.getElementById('budgetsList');
+            budgetsList.innerHTML = '';
+            
+            if (budgets.length === 0) {
+                budgetsList.innerHTML = '<div class="alert alert-info">No budget proposals submitted yet.</div>';
+                return;
+            }
+            
+            budgets.forEach(budget => {
+                const budgetElement = document.createElement('div');
+                budgetElement.className = 'budget-card';
+                budgetElement.innerHTML = `
+                    <div class="budget-title">${budget.title} <span class="status-badge">${budget.status}</span></div>
+                    <div class="budget-details">
+                        <p>Amount: <span class="budget-amount">${budget.amount}</span></p>
+                        <p>${budget.description}</p>
+                    </div>
+                    <div class="news-meta">
+                        Submitted by: ${budget.ministerName} on ${new Date(budget.date).toLocaleDateString()}
+                    </div>
+                    <div>
+                        <button class="action-btn view-btn">View</button>
+                        <button class="action-btn approve-btn">Approve</button>
+                        <button class="action-btn reject-btn">Reject</button>
+                    </div>
+                `;
+                budgetsList.appendChild(budgetElement);
+            });
+        }
+        
+        // Create poll
+        function createPoll() {
+            const question = document.getElementById('pollQuestion').value;
+            const option1 = document.getElementById('pollOption1').value;
+            const option2 = document.getElementById('pollOption2').value;
+            const option3 = document.getElementById('pollOption3').value;
+            const option4 = document.getElementById('pollOption4').value;
+            
+            if (!question || !option1 || !option2) {
+                alert('Please fill at least question and two options!');
+                return;
+            }
+            
+            const options = [option1, option2];
+            if (option3) options.push(option3);
+            if (option4) options.push(option4);
+            
+            const newPoll = {
+                id: Date.now(),
+                question,
+                options,
+                votes: {},
+                date: new Date().toISOString(),
+                active: true
+            };
+            
+            polls.push(newPoll);
+            localStorage.setItem('polls', JSON.stringify(polls));
+            
+            // Clear form
+            document.getElementById('pollQuestion').value = '';
+            document.getElementById('pollOption1').value = '';
+            document.getElementById('pollOption2').value = '';
+            document.getElementById('pollOption3').value = '';
+            document.getElementById('pollOption4').value = '';
+            
+            // Update list
+            loadPolls();
+            
+            alert('Poll created successfully!');
+        }
+        
+        // Load polls
+        function loadPolls() {
+            const pollsList = document.getElementById('pollsList');
+            pollsList.innerHTML = '';
+            
+            if (polls.length === 0) {
+                pollsList.innerHTML = '<div class="alert alert-info">No polls created yet.</div>';
+                return;
+            }
+            
+            polls.forEach(poll => {
+                const pollElement = document.createElement('div');
+                pollElement.className = 'poll-container';
+                pollElement.innerHTML = `
+                    <div class="news-title">${poll.question}</div>
+                    <div class="news-meta">
+                        Created on: ${new Date(poll.date).toLocaleDateString()}
+                        Status: ${poll.active ? 'Active' : 'Closed'}
+                    </div>
+                    <div>
+                        ${poll.options.map((option, index) => `
+                            <div class="poll-option" onclick="votePoll(${poll.id}, ${index})">
+                                ${option} (${Object.values(poll.votes).filter(v => v === index).length} votes)
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div>
+                        <button class="action-btn view-btn">View Results</button>
+                        <button class="action-btn ${poll.active ? 'delete-btn' : 'approve-btn'}" onclick="togglePoll(${poll.id})">
+                            ${poll.active ? 'Close Poll' : 'Open Poll'}
+                        </button>
+                    </div>
+                `;
+                pollsList.appendChild(pollElement);
+            });
+        }
+        
+        // Post news
+        function postNews() {
+            const category = document.getElementById('newsCategory').value;
+            const title = document.getElementById('newsTitle').value;
+            const content = document.getElementById('newsContent').value;
+            
+            if (!title || !content) {
+                alert('Please fill all fields!');
+                return;
+            }
+            
+            const newNews = {
+                id: Date.now(),
+                category,
+                title,
+                content,
+                date: new Date().toISOString(),
+                author: 'Prime Minister'
+            };
+            
+            news.push(newNews);
+            localStorage.setItem('news', JSON.stringify(news));
+            
+            // Clear form
+            document.getElementById('newsTitle').value = '';
+            document.getElementById('newsContent').value = '';
+            
+            // Update list
+            loadNews();
+            
+            alert('News posted successfully!');
+        }
+        
+        // Load news
+        function loadNews() {
+            const newsList = document.getElementById('newsList');
+            newsList.innerHTML = '';
+            
+            if (news.length === 0) {
+                newsList.innerHTML = '<div class="alert alert-info">No news posted yet.</div>';
+                return;
+            }
+            
+            news.forEach(newsItem => {
+                const newsElement = document.createElement('div');
+                newsElement.className = 'news-card';
+                newsElement.innerHTML = `
+                    <div class="news-title">${newsItem.title} <span class="status-badge">${newsItem.category}</span></div>
+                    <div class="news-content">${newsItem.content}</div>
+                    <div class="news-meta">
+                        Posted by: ${newsItem.author} on ${new Date(newsItem.date).toLocaleDateString()}
+                    </div>
+                `;
+                newsList.appendChild(newsElement);
+            });
+        }
+        
+        // Load themes and jokes
+        function loadThemesAndJokes() {
+            const currentTheme = document.getElementById('currentTheme');
+            const jokesList = document.getElementById('jokesList');
+            
+            currentTheme.innerHTML = '';
+            jokesList.innerHTML = '';
+            
+            if (themes.length === 0) {
+                currentTheme.innerHTML = '<div class="alert alert-info">No theme set for this week.</div>';
+            } else {
+                const latestTheme = themes[themes.length - 1];
+                currentTheme.innerHTML = `
+                    <div class="news-card">
+                        <div class="news-title">${latestTheme.title}</div>
+                        <div class="news-content">${latestTheme.description}</div>
+                        <div class="news-meta">
+                            Set on: ${new Date(latestTheme.date).toLocaleDateString()}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            if (jokes.length === 0) {
+                jokesList.innerHTML = '<div class="alert alert-info">No jokes posted yet.</div>';
+            } else {
+                jokes.forEach(joke => {
+                    const jokeElement = document.createElement('div');
+                    jokeElement.className = 'joke-card';
+                    jokeElement.innerHTML = `
+                        <div class="joke-title">${joke.title}</div>
+                        <div class="joke-content">${joke.content}</div>
+                        <div class="news-meta">
+                            Posted on: ${new Date(joke.date).toLocaleDateString()}
+                        </div>
+                    `;
+                    jokesList.appendChild(jokeElement);
+                });
+            }
+        }
+        
+        // Set theme
+        function setTheme() {
+            const title = document.getElementById('themeTitle').value;
+            const description = document.getElementById('themeDescription').value;
+            
+            if (!title || !description) {
+                alert('Please fill all fields!');
+                return;
+            }
+            
+            const newTheme = {
+                id: Date.now(),
+                title,
+                description,
+                date: new Date().toISOString()
+            };
+            
+            themes.push(newTheme);
+            localStorage.setItem('themes', JSON.stringify(themes));
+            
+            // Clear form
+            document.getElementById('themeTitle').value = '';
+            document.getElementById('themeDescription').value = '';
+            
+            // Update list
+            loadThemesAndJokes();
+            
+            alert('Theme set successfully!');
+        }
+        
+        // Post joke
+        function postJoke() {
+            const title = document.getElementById('jokeTitle').value;
+            const content = document.getElementById('jokeContent').value;
+            
+            if (!title || !content) {
+                alert('Please fill all fields!');
+                return;
+            }
+            
+            const newJoke = {
+                id: Date.now(),
+                title,
+                content,
+                date: new Date().toISOString()
+            };
+            
+            jokes.push(newJoke);
+            localStorage.setItem('jokes', JSON.stringify(jokes));
+            
+            // Clear form
+            document.getElementById('jokeTitle').value = '';
+            document.getElementById('jokeContent').value = '';
+            
+            // Update list
+            loadThemesAndJokes();
+            
+            alert('Joke posted successfully!');
+        }
+        
+        // Load best minister
+        function loadBestMinister() {
+            const bestMinisterSelect = document.getElementById('bestMinisterSelect');
+            const bestMinisterDisplay = document.getElementById('bestMinisterDisplay');
+            
+            bestMinisterSelect.innerHTML = '<option value="">Select Minister</option>';
+            ministers.forEach(minister => {
+                const option = document.createElement('option');
+                option.value = minister.id;
+                option.textContent = minister.name;
+                bestMinisterSelect.appendChild(option);
+            });
+            
+            bestMinisterDisplay.innerHTML = '';
+            
+            if (bestMinisters.length === 0) {
+                bestMinisterDisplay.innerHTML = '<div class="alert alert-info">No best minister selected for this week.</div>';
+            } else {
+                const latestBestMinister = bestMinisters[bestMinisters.length - 1];
+                const minister = ministers.find(m => m.id === latestBestMinister.ministerId);
+                
+                if (minister) {
+                    bestMinisterDisplay.innerHTML = `
+                        <div class="minister-card">
+                            <div class="minister-name">${minister.name} - Best Minister of the Week</div>
+                            <div class="minister-details">
+                                Class: ${minister.class} | House: ${minister.house}
+                            </div>
+                            <div class="news-content">
+                                <p><strong>Achievements:</strong> ${latestBestMinister.achievements}</p>
+                                <p><strong>Facts:</strong> ${latestBestMinister.facts}</p>
+                            </div>
+                            <div class="news-meta">
+                                Selected on: ${new Date(latestBestMinister.date).toLocaleDateString()}
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+        }
+        
+        // Set best minister
+        function setBestMinister() {
+            const ministerId = document.getElementById('bestMinisterSelect').value;
+            const achievements = document.getElementById('bestMinisterAchievements').value;
+            const facts = document.getElementById('bestMinisterFacts').value;
+            
+            if (!ministerId || !achievements || !facts) {
+                alert('Please fill all fields!');
+                return;
+            }
+            
+            const minister = ministers.find(m => m.id == ministerId);
+            
+            const newBestMinister = {
+                id: Date.now(),
+                ministerId,
+                ministerName: minister.name,
+                achievements,
+                facts,
+                date: new Date().toISOString()
+            };
+            
+            bestMinisters.push(newBestMinister);
+            localStorage.setItem('bestMinisters', JSON.stringify(bestMinisters));
+            
+            // Clear form
+            document.getElementById('bestMinisterSelect').value = '';
+            document.getElementById('bestMinisterAchievements').value = '';
+            document.getElementById('bestMinisterFacts').value = '';
+            
+            // Update list
+            loadBestMinister();
+            
+            alert('Best minister set successfully!');
+        }
+        
+        // Change PIN
+        function changePin() {
+            const currentPin = document.getElementById('currentPin').value;
+            const newPin = document.getElementById('newPin').value;
+            const confirmPin = document.getElementById('confirmPin').value;
+            
+            if (!currentPin || !newPin || !confirmPin) {
+                alert('Please fill all fields!');
+                return;
+            }
+            
+            if (newPin !== confirmPin) {
+                alert('New PIN and confirmation do not match!');
+                return;
+            }
+            
+            // For demo purposes, we'll just show an alert
+            // In a real application, you would verify the current PIN and update it
+            alert('PIN changed successfully!');
+            
+            // Clear form
+            document.getElementById('currentPin').value = '';
+            document.getElementById('newPin').value = '';
+            document.getElementById('confirmPin').value = '';
+        }
+        
+        // Load fines for payment
+        function loadFinesPayment() {
+            const finesPaymentList = document.getElementById('finesPaymentList');
+            finesPaymentList.innerHTML = '';
+            
+            if (fines.length === 0) {
+                finesPaymentList.innerHTML = '<tr><td colspan="6" style="text-align: center;">No fines issued yet.</td></tr>';
+                return;
+            }
+            
+            fines.forEach(fine => {
+                const minister = ministers.find(m => m.id === fine.ministerId);
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${minister ? minister.name : 'Unknown'}</td>
+                    <td>${fine.amount}</td>
+                    <td>${fine.reason}</td>
+                    <td>${new Date(fine.date).toLocaleDateString()}</td>
+                    <td>${fine.paid ? 'Paid' : 'Unpaid'}</td>
+                    <td>
+                        ${!fine.paid ? `
+                            <button class="action-btn pay-btn" onclick="payFine(${fine.id})">Pay</button>
+                        ` : ''}
+                        <button class="action-btn print-btn" onclick="printReceipt(${fine.id})">Print Receipt</button>
+                    </td>
+                `;
+                finesPaymentList.appendChild(row);
+            });
+        }
+        
+        // Pay fine
+        function payFine(fineId) {
+            const fine = fines.find(f => f.id === fineId);
+            if (fine) {
+                fine.paid = true;
+                fine.paymentDate = new Date().toISOString();
+                localStorage.setItem('fines', JSON.stringify(fines));
+                loadFinesPayment();
+                alert('Fine paid successfully!');
+            }
+        }
+        
+        // Print receipt
+        function printReceipt(fineId) {
+            const fine = fines.find(f => f.id === fineId);
+            if (fine) {
+                const receiptWindow = window.open('', '_blank');
+                receiptWindow.document.write(`
+                    <html>
+                    <head>
+                        <title>Fine Receipt</title>
+                        <style>
+                            body { font-family: Arial, sans-serif; margin: 20px; }
+                            .header { text-align: center; margin-bottom: 20px; }
+                            .details { margin-bottom: 20px; }
+                            .footer { margin-top: 30px; text-align: center; }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="header">
+                            <h1>GoodChoice College</h1>
+                            <h2>Fine Payment Receipt</h2>
+                        </div>
+                        <div class="details">
+                            <p><strong>Minister:</strong> ${fine.ministerName}</p>
+                            <p><strong>Amount:</strong> ${fine.amount}</p>
+                            <p><strong>Reason:</strong> ${fine.reason}</p>
+                            <p><strong>Payment Date:</strong> ${new Date(fine.paymentDate).toLocaleDateString()}</p>
+                        </div>
+                        <div class="footer">
+                            <p>Thank you for your payment!</p>
+                        </div>
+                    </body>
+                    </html>
+                `);
+                receiptWindow.document.close();
+                receiptWindow.print();
+            }
+        }
+        
+        // Export data
+        function exportData() {
+            const allData = {
+                ministers,
+                posts,
+                importantDays,
+                duties,
+                attendance,
+                reports,
+                fines,
+                budgets,
+                polls,
+                news,
+                alerts,
+                jokes,
+                themes,
+                bestMinisters,
+                facts
+            };
+            
+            const dataStr = JSON.stringify(allData, null, 2);
+            document.getElementById('exportDataText').textContent = dataStr;
+            document.getElementById('exportDataDisplay').style.display = 'block';
+            
+            // Create download link
+            const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+            const exportFileDefaultName = 'goodchoice_data.json';
+            
+            const linkElement = document.createElement('a');
+            linkElement.setAttribute('href', dataUri);
+            linkElement.setAttribute('download', exportFileDefaultName);
+            linkElement.click();
+        }
+        
+        // Import data
+        function importData() {
+            const dataText = document.getElementById('importDataText').value;
+            if (!dataText) {
+                alert('Please paste JSON data to import!');
+                return;
+            }
+            
+            try {
+                const importedData = JSON.parse(dataText);
+                
+                // Import all data
+                if (importedData.ministers) {
+                    ministers = importedData.ministers;
+                    localStorage.setItem('ministers', JSON.stringify(ministers));
+                }
+                if (importedData.posts) {
+                    posts = importedData.posts;
+                    localStorage.setItem('posts', JSON.stringify(posts));
+                }
+                if (importedData.importantDays) {
+                    importantDays = importedData.importantDays;
+                    localStorage.setItem('importantDays', JSON.stringify(importantDays));
+                }
+                // Import other data similarly...
+                
+                alert('Data imported successfully!');
+                location.reload(); // Reload the page to reflect changes
+            } catch (e) {
+                alert('Error importing data: ' + e.message);
+            }
+        }
+        
+        // Clear data
+        function clearData() {
+            if (confirm('Are you sure you want to clear all data? This action cannot be undone.')) {
+                localStorage.clear();
+                alert('All data has been cleared!');
+                location.reload();
+            }
+        }
+        
+        // Load PM data
+        function loadPmData() {
+            loadMinistersList();
+            // Other PM data loading functions would be called here
+        }
+        
+        // Load minister reports
+        function loadMinisterReports() {
+            const myReportsList = document.getElementById('myReportsList');
+            myReportsList.innerHTML = '';
+            
+            const myReports = reports.filter(report => report.ministerId === currentUser.id);
+            
+            if (myReports.length === 0) {
+                myReportsList.innerHTML = '<div class="alert alert-info">You have not submitted any reports yet.</div>';
+                return;
+            }
+            
+            myReports.forEach(report => {
+                const reportElement = document.createElement('div');
+                reportElement.className = 'news-card';
+                reportElement.innerHTML = `
+                    <div class="news-title">${report.title} <span class="status-badge">${report.status}</span></div>
+                    <div class="news-content">${report.content}</div>
+                    <div class="news-meta">
+                        Submitted on: ${new Date(report.date).toLocaleDateString()}
+                    </div>
+                `;
+                myReportsList.appendChild(reportElement);
+            });
+        }
+        
+        // Submit budget
+        function submitBudget() {
+            const title = document.getElementById('budgetTitle').value;
+            const amount = document.getElementById('budgetAmount').value;
+            const description = document.getElementById('budgetDescription').value;
+            
+            if (!title || !amount || !description) {
+                alert('Please fill all fields!');
+                return;
+            }
+            
+            const newBudget = {
+                id: Date.now(),
+                ministerId: currentUser.id,
+                ministerName: currentUser.name,
+                title,
+                amount: parseFloat(amount),
+                description,
+                date: new Date().toISOString(),
+                status: 'Pending'
+            };
+            
+            budgets.push(newBudget);
+            localStorage.setItem('budgets', JSON.stringify(budgets));
+            
+            // Clear form
+            document.getElementById('budgetTitle').value = '';
+            document.getElementById('budgetAmount').value = '';
+            document.getElementById('budgetDescription').value = '';
+            
+            alert('Budget proposal submitted successfully!');
+        }
+        
+        // Load minister budgets
+        function loadMinisterBudgets() {
+            const myBudgetsList = document.getElementById('myBudgetsList');
+            myBudgetsList.innerHTML = '';
+            
+            const myBudgets = budgets.filter(budget => budget.ministerId === currentUser.id);
+            
+            if (myBudgets.length === 0) {
+                myBudgetsList.innerHTML = '<div class="alert alert-info">You have not submitted any budget proposals yet.</div>';
+                return;
+            }
+            
+            myBudgets.forEach(budget => {
+                const budgetElement = document.createElement('div');
+                budgetElement.className = 'budget-card';
+                budgetElement.innerHTML = `
+                    <div class="budget-title">${budget.title} <span class="status-badge">${budget.status}</span></div>
+                    <div class="budget-details">
+                        <p>Amount: <span class="budget-amount">${budget.amount}</span></p>
+                        <p>${budget.description}</p>
+                    </div>
+                    <div class="news-meta">
+                        Submitted on: ${new Date(budget.date).toLocaleDateString()}
+                    </div>
+                `;
+                myBudgetsList.appendChild(budgetElement);
+            });
+        }
+        
+        // Mark attendance
+        function markAttendance() {
+            const now = new Date();
+            const meetingTime = new Date();
+            const [hours, minutes] = attendance.meetingTime.split(':');
+            meetingTime.setHours(parseInt(hours), parseInt(minutes), 0, 0);
+            
+            const allowanceMs = attendance.allowance * 60 * 1000;
+            const lateTime = new Date(meetingTime.getTime() + allowanceMs);
+            
+            let status = 'present';
+            if (now > lateTime) {
+                status = 'late';
+            }
+            
+            // Check if already marked attendance today
+            const today = new Date().toDateString();
+            const existingRecord = attendance.records.find(record => 
+                record.ministerId === currentUser.id && new Date(record.date).toDateString() === today
+            );
+            
+            if (existingRecord) {
+                alert('You have already marked your attendance for today!');
+                return;
+            }
+            
+            const newRecord = {
+                ministerId: currentUser.id,
+                ministerName: currentUser.name,
+                date: now.toISOString(),
+                status
+            };
+            
+            attendance.records.push(newRecord);
+            localStorage.setItem('attendance', JSON.stringify(attendance));
+            
+            alert(`Attendance marked as ${status.toUpperCase()}!`);
+        }
+        
+        // Load minister news
+        function loadMinisterNews() {
+            const ministerNewsContainer = document.getElementById('ministerNewsContainer');
+            ministerNewsContainer.innerHTML = '';
+            
+            if (news.length === 0) {
+                ministerNewsContainer.innerHTML = '<div class="alert alert-info">No news available.</div>';
+                return;
+            }
+            
+            news.forEach(newsItem => {
+                const newsElement = document.createElement('div');
+                newsElement.className = 'news-card';
+                newsElement.innerHTML = `
+                    <div class="news-title">${newsItem.title} <span class="status-badge">${newsItem.category}</span></div>
+                    <div class="news-content">${newsItem.content}</div>
+                    <div class="news-meta">
+                        Posted on: ${new Date(newsItem.date).toLocaleDateString()}
+                    </div>
+                `;
+                ministerNewsContainer.appendChild(newsElement);
+            });
+        }
+        
+        // Load minister polls
+        function loadMinisterPolls() {
+            const pollsContainer = document.getElementById('pollsContainer');
+            pollsContainer.innerHTML = '';
+            
+            const activePolls = polls.filter(poll => poll.active);
+            
+            if (activePolls.length === 0) {
+                pollsContainer.innerHTML = '<div class="alert alert-info">No active polls at this time.</div>';
+                return;
+            }
+            
+            activePolls.forEach(poll => {
+                const hasVoted = poll.votes[currentUser.id] !== undefined;
+                
+                const pollElement = document.createElement('div');
+                pollElement.className = 'poll-container';
+                pollElement.innerHTML = `
+                    <div class="news-title">${poll.question}</div>
+                    <div class="news-meta">
+                        Created on: ${new Date(poll.date).toLocaleDateString()}
+                    </div>
+                    <div>
+                        ${poll.options.map((option, index) => `
+                            <div class="poll-option" onclick="${!hasVoted ? `votePoll(${poll.id}, ${index})` : ''}">
+                                ${option} 
+                                ${hasVoted ? `(${Object.values(poll.votes).filter(v => v === index).length} votes)` : ''}
+                            </div>
+                        `).join('')}
+                    </div>
+                    ${hasVoted ? `
+                        <div class="alert alert-info">
+                            You have already voted in this poll.
+                        </div>
+                    ` : ''}
+                `;
+                pollsContainer.appendChild(pollElement);
+            });
+        }
+        
+        // Vote in poll
+        function votePoll(pollId, optionIndex) {
+            const poll = polls.find(p => p.id === pollId);
+            if (poll && !poll.votes[currentUser.id]) {
+                poll.votes[currentUser.id] = optionIndex;
+                localStorage.setItem('polls', JSON.stringify(polls));
+                loadMinisterPolls();
+                alert('Vote recorded successfully!');
+            }
+        }
+        
+        // Load minister fines
+        function loadMinisterFines() {
+            const myFinesList = document.getElementById('myFinesList');
+            myFinesList.innerHTML = '';
+            
+            const myFines = fines.filter(fine => fine.ministerId === currentUser.id);
+            
+            if (myFines.length === 0) {
+                myFinesList.innerHTML = '<div class="alert alert-info">You have no fines.</div>';
+                return;
+            }
+            
+            myFines.forEach(fine => {
+                const fineElement = document.createElement('div');
+                fineElement.className = 'news-card';
+                fineElement.innerHTML = `
+                    <div class="news-title">Fine: ${fine.amount} <span class="status-badge">${fine.paid ? 'Paid' : 'Unpaid'}</span></div>
+                    <div class="news-content">Reason: ${fine.reason}</div>
+                    <div class="news-meta">
+                        Issued on: ${new Date(fine.date).toLocaleDateString()}
+                    </div>
+                    ${!fine.paid ? `
+                        <div>
+                            <button class="action-btn pay-btn" onclick="payFine(${fine.id})">Pay Fine</button>
+                        </div>
+                    ` : `
+                        <div>
+                            <button class="action-btn print-btn" onclick="printReceipt(${fine.id})">Print Receipt</button>
+                        </div>
+                    `}
+                `;
+                myFinesList.appendChild(fineElement);
+            });
+        }
+        
+        // Load minister jokes and facts
+        function loadMinisterJokesAndFacts() {
+            const jokesContainer = document.getElementById('jokesContainer');
+            const factsContainer = document.getElementById('factsContainer');
+            
+            jokesContainer.innerHTML = '';
+            factsContainer.innerHTML = '';
+            
+            if (jokes.length === 0) {
+                jokesContainer.innerHTML = '<div class="alert alert-info">No jokes available.</div>';
+            } else {
+                jokes.forEach(joke => {
+                    const jokeElement = document.createElement('div');
+                    jokeElement.className = 'joke-card';
+                    jokeElement.innerHTML = `
+                        <div class="joke-title">${joke.title}</div>
+                        <div class="joke-content">${joke.content}</div>
+                    `;
+                    jokesContainer.appendChild(jokeElement);
+                });
+            }
+            
+            if (facts.length === 0) {
+                factsContainer.innerHTML = '<div class="alert alert-info">No facts available.</div>';
+            } else {
+                facts.forEach(fact => {
+                    const factElement = document.createElement('div');
+                    factElement.className = 'news-card';
+                    factElement.innerHTML = `
+                        <div class="news-content">${fact.content}</div>
+                    `;
+                    factsContainer.appendChild(factElement);
+                });
+            }
+        }
+        
+        // Initialize the app when the page loads
+        window.onload = initApp;
+    </script>
+</body>
+</html>
